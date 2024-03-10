@@ -1,0 +1,52 @@
+<!--
+Assignment 7.1 Event Driven Programming
+Created by Tyler Prettyman
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Rotator</title>
+    <style>
+        /* Set the page size to standard 800x600 pixels */
+        html, body {
+            width: 1920px;
+            height: 1080px;
+            margin: 0 auto; /* Center the page */
+            position: relative;
+            overflow: hidden; /* Prevent scrolling */
+        }
+        /* Style for the buttons */
+        .button {
+            padding: 40px 80px; /* Make the buttons twice as big */
+            margin: 10px;
+            cursor: pointer;
+            position: absolute; /* Position buttons absolutely */
+            top: 100px; /* Place buttons at the top */
+        }
+        #startBtn {
+            left: 20px;
+        }
+        #stopBtn {
+            right: 20px;
+        }
+        /* Style for the meme image */
+        #meme {
+            position: absolute;
+            top: 100px; /* Ensure the image does not start over the buttons */
+            left: 50%; /* Center the image horizontally */
+            transform: translateX(-50%); /* Adjust for the image's width */
+            transition: transform 1s linear; /* Smooth transition for rotation */
+        }
+    </style>
+</head>
+<body>
+    <!-- Meme image placeholder -->
+    <img src="shingodzillaart.jpg" id="meme" alt="Meme Image">
+    <!-- Start and Stop buttons to control the meme movement -->
+    <button class="button" id="startBtn" onclick="startMoving()">Start</button>
+    <button class="button" id="stopBtn" onclick="stopMoving()">Stop</button>
+    <script src="script_7_1.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>
